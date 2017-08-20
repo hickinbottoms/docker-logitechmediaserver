@@ -1,22 +1,25 @@
 # Docker Container for Logitech Media Server
 
-Docker image for Logitech Media Server (SqueezeCenter, SqueezeboxServer, SlimServer).
+Docker image for [Logitech Media Server](https://github.com/Logitech/slimserver) (aka SqueezeCenter, SqueezeboxServer, SlimServer).
 
 Runs as non-root user, installs useful dependencies, sets a locale,
 exposes ports needed for various plugins and server discovery and
 allows editing of config files like `convert.conf`.
 
-Download the current deb package (I prefer to keep it archived in the repo
-than relying on download remaining available):
+Newer versions of Logitech Media Server support updates in place.  To
+recreate this container I keep a tag of the latest version build in the
+working directory.  To update that:
 
 ```
 make update
 ```
 
-Build the image:
+To build the image:
+
 ```
 make build
 ```
+
 (edit `USER` in `Makefile` if you want).
 
 Run:
@@ -34,3 +37,6 @@ docker-compose up -d
 (see `docker-compose.yml` to add volumes)
 
 See Github network for other authors (JingleManSweep, map7, joev000).
+
+Works well with my [MusicIP container](https://hub.docker.com/r/justifiably/musicip/).
+
