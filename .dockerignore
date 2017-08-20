@@ -1,1 +1,8 @@
 .git
+README.md
+TODO.md
+LICENSE
+Makefile
+docker-compose.yml
+
+
